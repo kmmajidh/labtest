@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Time & Greeting Generator</title>
+    <style>
+        /* Optional basic styling for a cleaner look */
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <!-- HTML Structure (15 Marks) -->
+    
+    <!-- Empty heading tag for default time -->
+    <h2 id="timeDisplay"></h2>
+    
+    <!-- Button to trigger the greeting -->
+    <button id="greetBtn">Greet</button>
+    
+    <!-- Empty heading tag for the greeting output -->
+    <h2 id="greetingMessage"></h2>
+
+    <!-- Script tag at the bottom of the body (10 Marks part 1) -->
+    <script>
+        // --- Default Date & Time Display (10 Marks) ---
+        // Create a new Date object outside of any functions
+        let now = new Date();
+        
+        // Select the timeDisplay element and set it to show the current date and time
+        document.getElementById("timeDisplay").innerText = "Current Date & Time: " + now.toLocaleString();
+
+
+        // --- Button Click Event & Hour Extraction (15 Marks) ---
+        // Select the button and add a click event listener
+        document.getElementById("greetBtn").addEventListener("click", function() {
+            
+            // Get the current hour of the day (0 to 23)
+            let currentHour = new Date().getHours();
+            let greeting = "";
+
+            // --- Greeting Logic & Output (10 Marks) ---
+            // Simple if...else if...else statement
+            if (currentHour < 12) {
+                greeting = "Good Morning!";
+            } else if (currentHour < 18) {
+                greeting = "Good Afternoon!";
+            } else {
+                greeting = "Good Evening!";
+            }
+
+            // Select the greetingMessage element and update its innerText
+            document.getElementById("greetingMessage").innerText = greeting;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Greeting Alert</title>
+</head>
+<body>
+
+    <!-- HTML Form (15 Marks) -->
+    <h2>Welcome! Please enter your name:</h2>
+    
+    <!-- Input field with an ID -->
+    <input type="text" id="userName" placeholder="Enter your name">
+    
+    <!-- Button with an ID -->
+    <button id="greetBtn">Say Hello</button>
+
+    <!-- JavaScript Linking (10 Marks) -->
+    <!-- Script tag placed at the bottom of the body -->
+    <script>
+        // Button Click Event (15 Marks)
+        // Select the button and add a click event listener
+        document.getElementById("greetBtn").addEventListener("click", function() {
+            
+            // Capturing Data & Alert (10 Marks)
+            // Get the text typed into the input field
+            var enteredName = document.getElementById("userName").value;
+            
+            // Trigger the alert with the custom greeting
+            // If the user leaves it blank, it will still show "Hello, ! Welcome to the lab." 
+            alert("Hello, " + enteredName + "! Welcome to the lab.");
+        });
+    </script>
+</body>
+</html>

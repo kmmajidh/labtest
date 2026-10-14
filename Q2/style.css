@@ -1,0 +1,47 @@
+/* CSS Link & Background (10 Marks) */
+body {
+    background-color: #e2e8f0; /* Soft light gray background */
+}
+
+/* Styling the Card (15 Marks) */
+.profile-card {
+    background-color: white;             /* White background */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle box-shadow */
+    padding: 20px;                       /* 20px padding */
+    text-align: center;                  /* Centers the text */
+    width: 250px;                        /* Sets width to 250px */
+    margin: 50px auto;                   /* Centers the card on the screen */
+    border-radius: 8px;                  /* Optional: rounds the card corners slightly */
+}
+
+/* Styling the Image (10 Marks part 1) */
+.profile-card img {
+    width: 100px;                        /* Image width 100px */
+    border-radius: 50%;                  /* Makes the image a perfect circle */
+}
+
+/* Optional styling to make the text look neat */
+.profile-card h3 {
+    margin: 10px 0 5px 0;
+    color: #333;
+}
+
+.profile-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Styling the Button (10 Marks part 2) */
+.profile-card button {
+    background-color: purple;            /* Purple background */
+    color: white;                        /* White text */
+    border: none;                        /* Removes default border */
+    padding: 8px 20px;                   /* 8px vertical padding */
+    cursor: pointer;                     /* Makes it look clickable */
+    border-radius: 4px;                  /* Optional: slightly rounded button corners */
+}
+
+.profile-card button:hover {
+    background-color: #6a0dad;           /* Optional: slightly darker purple on hover */
+}

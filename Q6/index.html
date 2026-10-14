@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table Generator</title>
+</head>
+<body>
+
+    <!-- Initial Output (10 Marks) -->
+    <!-- Using document.write() to print the string to the screen immediately on page load -->
+    <script>
+        let welcomeMessage = "<strong>Welcome to the Math Generator!</strong><br><br>";
+        document.write(welcomeMessage);
+    </script>
+
+    <!-- HTML Setup (10 Marks) -->
+    <label for="numInput">Enter a number: </label>
+    <input type="number" id="numInput" placeholder="Enter number">
+    <button id="generateBtn">Generate Table</button>
+
+    <!-- Output container for the loop results -->
+    <div id="tableOutput" style="margin-top: 20px; font-family: monospace; font-size: 16px;"></div>
+
+    <script>
+        // Number Capture (10 Marks)
+        document.getElementById("generateBtn").addEventListener("click", function() {
+            
+            // Get the value from the input field
+            let num = parseInt(document.getElementById("numInput").value);
+            let displayArea = document.getElementById("tableOutput");
+            
+            // Reset output for new calculations
+            let outputHTML = "";
+
+            // The Loop (20 Marks)
+            // Loop starts at 1 and ends at 10
+            for (let i = 1; i <= 10; i++) {
+                // Do the multiplication math
+                let result = num * i;
+                // Append each line with a <br> tag
+                outputHTML += num + " x " + i + " = " + result + "<br>";
+            }
+
+            // Print the completed table to the screen
+            displayArea.innerHTML = outputHTML;
+        });
+    </script>
+</body>
+</html>

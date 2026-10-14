@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Logic Loop</title>
+</head>
+<body>
+
+    <!-- HTML Setup (10 Marks) -->
+    <label for="numInput">Enter a number:</label>
+    <!-- Number input field with an ID -->
+    <input type="number" id="numInput" placeholder="e.g., 5">
+    
+    <!-- Button to trigger the print -->
+    <button id="printBtn">Print Words</button>
+
+    <!-- An empty div to display our printed results on the screen -->
+    <div id="output" style="margin-top: 20px;"></div>
+
+    <script>
+        // Number Capture (10 Marks) - Attaching click event to the button
+        document.getElementById("printBtn").addEventListener("click", function() {
+            
+            // Get the number entered by the user and convert it to an integer
+            let num = parseInt(document.getElementById("numInput").value);
+            
+            // Select the output div where we will print the text
+            let displayArea = document.getElementById("output");
+            
+            // Array Creation (10 Marks)
+            // Create a simple Array with 3 colors
+            let colors = ["Red", "Green", "Blue"];
+            
+            // Print the first color in the array to the screen before the loop starts
+            let outputHTML = "First color in array: <strong>" + colors[0] + "</strong><br><br>";
+
+            // The Loop (20 Marks)
+            // Write a for loop that starts at 0 and runs as many times as the user's number
+            for (let i = 0; i < num; i++) {
+                // Inside the loop, append the sentence repeatedly on new lines
+                outputHTML += "JavaScript is fun!<br>";
+            }
+
+            // Finally, print everything to the screen inside our output div
+            displayArea.innerHTML = outputHTML;
+        });
+    </script>
+</body>
+</html>
